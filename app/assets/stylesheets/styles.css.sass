@@ -1,0 +1,307 @@
+$BLACK: #2B2B2B
+$BLUE: #006688
+$GREEN: #338C73
+$RED: #BE2B17
+
+body
+	font-family: "proxima-nova", $helvetica
+	padding-top: 110px
+	-webkit-font-smoothing: antialiased
+
+a
+	color: $BLUE
+	font-weight: 700
+	&:hover
+		text-decoration: none
+
+[class^="icon-"], [class*=" icon-"]
+	margin: 0
+
+ul
+	padding: 0
+	margin: 0
+
+textarea
+	resize: none
+
+h1
+	border-bottom: 1px solid #DDD
+	margin: 0
+	padding: 0 0 5px
+	color: #999
+	font-size: 28px
+	line-height: 38px
+	font-weight: 100
+	text-transform: uppercase
+
+/* BOOTSTRAP OVERRIDES ------------------------------------------------------------------------- */
+.container, .navbar-fixed-top .container
+	width: 700px
+
+.navbar-inner
+	background: #FFF
+	border: 0
+	padding: 15px 0
+
+.navbar-fixed-top .navbar-inner
+	@include box-shadow(none)
+
+.navbar .nav.pull-right
+	// margin-right: -15px
+
+.navbar .nav.pull-right > li > a
+	padding: 10px 0 10px 25px
+
+.navbar .brand
+	color: $RED
+	font-size: 20px
+	font-weight: 400
+	padding-top: 9px
+
+.navbar .nav > li > a:hover
+	color: $BLUE
+
+.navbar .nav > li > a.dropdown-toggle
+	i
+		margin-left: 3px
+
+.navbar .nav li.dropdown.open > .dropdown-toggle, .navbar .nav li.dropdown.active > .dropdown-toggle, .navbar .nav li.dropdown.open.active > .dropdown-toggle
+	background: transparent
+	color: $BLUE
+
+.alert
+	background: $BLUE
+	border: 0
+	color: #FFF
+	font-weight: 700
+	text-shadow: none
+
+
+/* GLOBAL -------------------------------------------------------------------------------------- */
+.group:after
+	clear: both
+	content: ""
+	display: table
+
+// .content
+	// border: 1px solid #EEE
+	// padding: 2px
+	// margin: 0 -4px 0 -2px
+	// @include border-radius(6px)
+	// @include box-shadow(0 1px 2px rgba(0,0,0,.15))
+
+.welcome-image
+	background: url("http://dominicanstudentconference.com/assets/wesleyan/wesleyan-header.jpeg")
+	background-position: -200px -200px
+	height: 225px
+	position: relative
+	border-bottom: 1px solid #FFF
+	// @include border-radius(0 0 6px 6px)
+
+#myCarousel
+	position: relative
+	text-align: center
+
+.carousel-inner
+	text-align: center
+	// position: relative
+
+.carousel-inner
+	// position: relative
+	img
+		// position: absolute
+		// clip: rect(0px,60px,200px,0px)
+		max-height: 200px
+		width: 100%
+
+// .welcome-image-inner
+// 	background: rgba(0, 0, 0, 0.5)
+// 	height: 120px
+// 	@include border-radius(0 0 6px 6px)
+
+// .welcome-content
+// 	padding: 20px
+
+// .welcome-crest
+// 	float: left
+// 	img
+// 		width: 50px
+
+.welcome-title
+	background: rgba(0,0,0,0.7)
+	color: white
+	font-size: 20px
+	font-weight: 900
+	padding: 11px 25px
+	position: absolute
+	bottom: 0
+	left: 0
+	right: 0
+	text-align: left
+	z-index: 100
+	// width: 100%
+	// @include border-radius(0 0 6px 6px)
+	span
+		font-weight: 400
+		float: right
+
+
+// .welcome-subtitle
+// 	font-weight: 400
+// 	margin-left: 20px
+// // .welcome-register
+// 	background: rgba(255,255,255,0.8)
+// 	position: absolute
+// 	bottom: 0
+// 	left: 0
+// 	right: 0
+// 	text-align: center
+// 	color: #003366
+// 	font-size: 20px
+// 	font-weight: 700
+// 	padding: 10px
+// 	span
+// 		color: #336699
+
+
+/* SUB-NAV ------------------------------------------------------------------------------------- */
+.sub-navigation
+	background: #444
+	border-bottom: 1px solid #FFF
+	ul
+		list-style: none
+	li
+		display: inline-block
+		&:last-child a
+			background: $RED
+			border-left: 1px solid #FFF
+			border-right: 1px solid #FFF
+			color: #FFF
+			padding: 10px 24px 10px 25px
+			&:hover
+				background: $BLUE
+		a
+			background: #333
+			border-left: 1px solid #000
+			color: #CCC
+			display: block
+			font-weight: 700
+			padding: 10px 25px
+			&:hover
+				background: #222
+				color: #FFF
+
+
+/* BUTTONS ------------------------------------------------------------------------------------- */
+.btn
+	@include border-radius(2px)
+
+.sub-navigation .btn-register
+	color: #FFF
+	margin: 4px 4px 0 0
+	padding: 5px 10px
+
+/* SECTIONS ------------------------------------------------------------------------------------ */
+.page
+	margin-top: 20px
+
+.section
+	margin-bottom: 20px
+
+.section-body
+	background: #EEE
+	color: #666
+	font-weight: 700
+	padding: 15px 20px
+
+.section-subtitle
+	color: #336699
+	font-size: 20px
+	line-height: 36px
+	font-weight: 500
+	text-transform: uppercase
+
+.facebook > .section-body
+	background: #FFF
+	padding: 0
+
+.event-section
+	position: relative
+	span
+		position: absolute
+		top: -130px
+	h1
+		font-size: 20px
+		padding: 0
+
+/* AGENDA -------------------------------------------------------------------------------------- */
+#agenda
+.agenda-date
+	color: #777
+.agenda-time-column
+	width: 105px
+.agenda-name-column
+	font-weight: bold
+	a
+		display: block
+.agenda-venue-column
+	width: 140px
+
+.event-speakers
+	padding-top: 20px
+.event-speaker
+	padding-bottom: 30px
+.event-speaker-image
+	float: left
+	max-width: 200px
+.event-speaker-content
+	margin-left: 230px
+.event-speaker-name
+	color: $GREEN
+	font-size: 26px
+	line-height: 30px
+	padding: 0 0 5px
+.event-speaker-description
+
+/* HOST */
+#host
+#host ul
+	list-style: circle
+#host ul li
+	font-weight: 700
+	padding: 5px 0
+#host h4
+	color: #999
+	margin-top: 20px
+.host-list
+	margin-top: 2px
+	padding: 15px 20px
+
+.host-list.alert-success ul
+	margin-left: 15px
+
+
+#housing
+	padding-bottom: 100px
+
+.hotel
+	float: left
+	margin-top: 20px
+	padding: 0 15px
+	width: 320px
+
+.hotel-name
+	color: $BLACK
+	font-size: 16px
+	font-weight: 700
+
+#housing h1
+	font-size: 20px
+	padding: 0
+
+#history
+	ul
+		list-style: circle
+		margin: 20px 0 0 40px
+		li
+			margin-bottom: 5px

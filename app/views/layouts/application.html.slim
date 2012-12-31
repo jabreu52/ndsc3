@@ -1,0 +1,42 @@
+doctype html
+head
+	meta charset="utf-8"
+	meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+	title National Dominican Student Conference
+	meta name="description" content=(yield(:description) if content_for?(:description))
+	meta name="viewport" content="width=device-width, initial-scale=1.0"
+	= stylesheet_link_tag    "application", media: "all"
+	= javascript_include_tag "//use.typekit.com/ier1ulg.js", "application"
+	= csrf_meta_tags
+	javascript:
+		try{Typekit.load()}catch(e){}
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=268332203237884";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+body class=(controller_name, action_name)
+	#fb-root
+	= render "layouts/navigation"
+	- if current_page? root_path
+		.container
+			#myCarousel.carousel.slide
+				.welcome-title
+					| Wesleyan University
+					span March 29 - 31, 2013
+				.carousel-inner
+					.active.item= image_tag "carousel1.png"
+					.item= image_tag "carousel2.png"
+					.item= image_tag "carousel3.png"
+					.item= image_tag "carousel4.png"
+	#main role="main"
+		.container
+			.content
+				.row
+					.span9
+						= render "layouts/flash"
+						= yield
+				footer
+			/= debug(params) if Rails.env.development?

@@ -1,0 +1,66 @@
+.page
+	.section
+		h1 Theme
+		.section-body
+			span In true Wesleyan fashion, the theme of this year’s conference is social justice, with the title
+			b  “Peleando Injusticia, Haciendo Noticias,”
+			span  which translates to
+			i  Fighting Injustice and Making Headlines
+			span . All of our workshops will focus on social justice issues that affect and transcend the Dominican community. We aim to have an action-based mindset when discussing the issues at hand by holding an organization fair to facilitate networking that will expose Wesleyan students and conference participants to opportunities to make an impact. At the end of this conference, we hope that students will be empowered with tools to go back to their communities and start social movements that will make change.
+	.section
+		h1 style="border:0" Agenda
+		#agenda
+			table.table.table-striped.table-bordered
+				h4.agenda-date Friday, March 29, 2013
+				tbody
+					- @friday_events.each do |event|
+						tr
+							td.agenda-time-column= event.agenda_time
+							td.agenda-name-column
+								- if event.show_description
+									= link_to event.name, "#event-#{event.id}"
+								- else
+									= event.name
+							td.agenda-venue-column= event.venue
+
+			table.table.table-striped.table-bordered
+				h4.agenda-date Saturday, March 30, 2013
+				tbody
+					- @saturday_events.each do |event|
+						tr
+							td.agenda-time-column= event.agenda_time
+							td.agenda-name-column
+								- if event.show_description
+									= link_to event.name, "#event-#{event.id}"
+								- else
+									= event.name
+							td.agenda-venue-column= event.venue
+
+			table.table.table-striped.table-bordered
+				h4.agenda-date Sunday, March 31, 2013
+				tbody
+					- @sunday_events.each do |event|
+						tr
+							td.agenda-time-column= event.agenda_time
+							td.agenda-name-column
+								- if event.show_description
+									= link_to event.name, "#event-#{event.id}"
+								- else
+									= event.name
+							td.agenda-venue-column= event.venue
+
+	- @events.each do |event|
+		.event-section
+			span id="event-#{event.id}"
+			h1= event.name
+			- if event.description
+				.section-body
+					.event-description
+						= event.description
+			.event-speakers
+				- event.speakers.each do |speaker|
+					.event-speaker.group
+						.event-speaker-image= image_tag speaker.image, class: "img-polaroid"
+						.event-speaker-content
+							.event-speaker-name= speaker.name
+							.event-speaker-description= speaker.description
