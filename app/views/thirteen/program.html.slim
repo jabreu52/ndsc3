@@ -1,4 +1,4 @@
-.page
+#program.page
 	.section
 		h1 Theme
 		.section-body
@@ -50,7 +50,7 @@
 							td.agenda-venue-column= event.venue
 
 	- @events.each do |event|
-		.event-section
+		.event-section.sub-section
 			span id="event-#{event.id}"
 			h1= event.name
 			- if event.description

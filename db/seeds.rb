@@ -19,6 +19,14 @@ User.create({
   without_protection: true
 )
 
+User.create({
+  name: "Dorisol Inoa",
+  email: "dinoa@wesleyan.edu",
+  password: "password",
+  admin: true},
+  without_protection: true
+)
+
 puts "CREATE 2013 EVENTS"
 Event.create!(name: "Registration", venue: "Beckham Hall", start_time: DateTime.new(2013,3,29,18), end_time: DateTime.new(2013,3,29,23))
 comedy_show = Event.create!(name: "Dominican Comedy Show", venue: "Usdan", start_time: DateTime.new(2013,3,29,20), end_time: DateTime.new(2013,3,29,22), show_description: true)
