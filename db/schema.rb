@@ -41,24 +41,25 @@ ActiveRecord::Schema.define(:version => 20121230152808) do
   create_table "events", :force => true do |t|
     t.string   "name"
     t.string   "venue"
-    t.text     "description"
     t.datetime "start_time"
     t.datetime "end_time"
-    t.boolean  "workshop"
+    t.text     "description"
     t.boolean  "session"
-    t.boolean  "show_description", :default => false
-    t.datetime "created_at",                          :null => false
-    t.datetime "updated_at",                          :null => false
+    t.boolean  "show_in_program", :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "speakers", :force => true do |t|
     t.string   "name"
-    t.text     "description"
     t.string   "image"
-    t.boolean  "keynote"
-    t.string   "year"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "organization"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "notes"
+    t.text     "description"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,15 @@
+footer
+	.social-media
+		- mail_content = capture do
+			i.icon-envelope
+			| Email
+		= mail_to "wesndsc@gmail.com", mail_content, target: "_blank", encode: "javascript"
+		= link_to "https://www.facebook.com/pages/National-Dominican-Student-Conference/47619937613", target: "_blank" do
+			i.icon-facebook-sign
+			| Facebook
+		= link_to "https://twitter.com/WesNDSC2013", target: "_blank" do
+			i.icon-twitter
+			| Twitter
+		= link_to "http://ndsc2013.tumblr.com/", target: "_blank" do
+			i.icon-tumblr
+			| Tumblr

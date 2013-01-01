@@ -1,9 +1,9 @@
 ActiveAdmin.register Event do
-  # controller do
-  #   def scoped_collection
-  #     Event.where(year: "2013")
-  #   end
-  # end
+  controller do
+    def scoped_collection
+      Event.where{start_time > DateTime.now}
+    end
+  end
 	config.sort_order = "start_time_asc"
 	index do
 		column :name

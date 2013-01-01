@@ -1,4 +1,9 @@
 ActiveAdmin.register Speaker do
+  controller do
+    def scoped_collection
+      Speaker.joins(:events).where{events.start_time > DateTime.now}
+    end
+  end
 	index do
 		column :name
 		column :image do |speaker|
@@ -7,7 +12,6 @@ ActiveAdmin.register Speaker do
 		column :description do |speaker|
 			truncate(speaker.description, length: 50)
 		end
-		column :year
 		default_actions
   end
 end

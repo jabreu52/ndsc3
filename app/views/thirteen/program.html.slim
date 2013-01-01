@@ -1,4 +1,3 @@
-= render "layouts/carousel"
 #program.page
 	.section
 		h1 Theme
@@ -18,7 +17,7 @@
 						tr
 							td.agenda-time-column= event.agenda_time
 							td.agenda-name-column
-								- if event.show_description
+								- if event.show_in_program
 									= link_to event.name, "#event-#{event.id}"
 								- else
 									= event.name
@@ -31,7 +30,7 @@
 						tr
 							td.agenda-time-column= event.agenda_time
 							td.agenda-name-column
-								- if event.show_description
+								- if event.show_in_program
 									= link_to event.name, "#event-#{event.id}"
 								- else
 									= event.name
@@ -44,7 +43,7 @@
 						tr
 							td.agenda-time-column= event.agenda_time
 							td.agenda-name-column
-								- if event.show_description
+								- if event.show_in_program
 									= link_to event.name, "#event-#{event.id}"
 								- else
 									= event.name
