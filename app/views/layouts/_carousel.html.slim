@@ -4,7 +4,10 @@
 			| Wesleyan University
 			span March 29 - 31, 2013
 		.carousel-inner
-			.active.item= image_tag "carousel1.png"
-			.item= image_tag "carousel2.png"
-			.item= image_tag "carousel3.png"
-			.item= image_tag "carousel4.png"
+			- if current_page? housing_path
+				.active.item= image_tag "wesleyan-housing.png"
+			- else
+				.active.item= image_tag "carousel1.png"
+				.item= image_tag "carousel2.png"
+				.item= image_tag "carousel3.png"
+				.item= image_tag "carousel4.png"
