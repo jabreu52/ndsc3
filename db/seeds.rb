@@ -37,7 +37,7 @@ comedy_show.speakers.create!(first_name: "Vladimir", last_name: "Caamano", descr
 	began polishing his wit while attending Wesleyan University. Whether discussing his grandfather
 	who fathered 47 kids, going to college without luggage, or calling a cab company run by latino
 	spies, you will enjoy watching this comedian weave a hilarious fabric of truth and absurdity.
-	Check him out on http://www.laughingvlad.com.", image: "http://www.comedysoapbox.com/img/comedians/14801.jpg")
+	Check him out on http://www.laughingvlad.com.")
 
 Event.create!(name: "Breakfast", venue: "Usdan", start_time: DateTime.new(2013,3,30,8), end_time: DateTime.new(2013,3,30,8,45))
 Event.create!(name: "Registration", venue: "Beckham Hall", start_time: DateTime.new(2013,3,30,8), end_time: DateTime.new(2013,3,30,10))
@@ -75,8 +75,7 @@ dss.speakers.create!(first_name: "Angela", last_name: "Fernandez", suffix: "Esq.
 	providing pro bono legal services through the American Immigration Lawyers Association. Ms.
 	Fernandez has also successfully founded and managed elementary schools in the South Bronx
 	and in Washington DC, was a Women's Studies instructor for the LCC Inmate Education
-	Program at Riker's Island and was a staffer for former United States Senator Bill Bradley.",
-	image: "http://www.nmcir.org/AF.JPG")
+	Program at Riker's Island and was a staffer for former United States Senator Bill Bradley.")
 dss.speakers.create!(first_name:"Sonia", last_name: "Manjon", suffix: "Ph.D", description:"Sonia BasSheva Mañjon is Vice President for Institutional Partnerships
 and Chief Diversity Officer of Wesleyan University. In this role, Dr. Mañjon
 provides leadership in community collaborations, institutional partnerships
@@ -94,7 +93,7 @@ Conference in Texas and the 2006 International Conference on the Arts in Society
 conjunction with the Edinburgh Arts Festival in Scotland. Dr. Mañjon earned a Ph.D. in
 Humanities and a Master of Arts in Cultural Anthropology from the California Institute of
 Integral Studies, San Francisco. She received a Bachelor of Arts in World Arts and Cultures
-from the University of California, Los Angeles.", image: "http://www.middletownpress.com/content/articles/2011/01/17/news/doc4d34bafc6ce156041056213.jpg")
+from the University of California, Los Angeles.", image: "https://s3.amazonaws.com/ndsc/speakers/sonia+manjon/sonia-manjon.jpeg")
 
 # puts "CREATE 2012 EVENTS"
 Event.create!(name: "Registration", venue: "Third World Center", start_time: DateTime.new(2012,4,6,15), end_time: DateTime.new(2012,4,6,21))

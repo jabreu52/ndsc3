@@ -31,8 +31,9 @@ ActiveRecord::Schema.define(:version => 20121230152808) do
   create_table "event_speakers", :force => true do |t|
     t.integer  "event_id"
     t.integer  "speaker_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "priority",   :default => 2
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "event_speakers", ["event_id"], :name => "index_event_speakers_on_event_id"
@@ -51,11 +52,14 @@ ActiveRecord::Schema.define(:version => 20121230152808) do
   end
 
   create_table "speakers", :force => true do |t|
-    t.string   "name"
-    t.string   "image"
-    t.string   "organization"
+    t.string   "title"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "suffix"
     t.string   "email"
     t.string   "phone_number"
+    t.string   "organization"
+    t.text     "image"
     t.text     "notes"
     t.text     "description"
     t.datetime "created_at",   :null => false

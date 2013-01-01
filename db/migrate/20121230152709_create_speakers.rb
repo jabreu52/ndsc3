@@ -5,9 +5,9 @@ class CreateSpeakers < ActiveRecord::Migration
       t.string  :first_name
       t.string  :last_name
       t.string  :suffix
-      t.string  :organization
       t.string  :email
       t.string  :phone_number
+      t.string  :organization
       t.text    :image
       t.text    :notes
       t.text    :description

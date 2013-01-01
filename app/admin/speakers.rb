@@ -14,4 +14,20 @@ ActiveAdmin.register Speaker do
 		end
 		default_actions
   end
+
+  form( html: { multipart: true } )  do |f|
+		f.inputs "Details" do
+			f.input :title
+			f.input :first_name
+			f.input :last_name
+			f.input :suffix
+			f.input :email
+			f.input :phone_number
+			f.input :organization
+			f.input :image, as: :file
+			f.input :description
+			f.input :notes
+			f.buttons
+		end
+  end
 end

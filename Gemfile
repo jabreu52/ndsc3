@@ -24,3 +24,6 @@ gem 'activeadmin'
 gem 'meta_search'
 gem 'simple_form'
 gem 'squeel'
+
+gem 'fog'
+gem 'carrierwave'

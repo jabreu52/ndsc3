@@ -58,7 +58,7 @@
 					.event-description
 						= event.description
 			.event-speakers
-				- event.speakers.each do |speaker|
+				- event.speakers.sort_by!{|speaker| speaker.priority}.each do |speaker|
 					.event-speaker.group
 						.event-speaker-image= image_tag speaker.image, class: "img-polaroid"
 						.event-speaker-content

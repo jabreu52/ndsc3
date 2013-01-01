@@ -3,6 +3,7 @@ class CreateEventSpeakers < ActiveRecord::Migration
     create_table :event_speakers do |t|
       t.references :event
       t.references :speaker
+      t.integer	:priority, default: 2
 
       t.timestamps
     end

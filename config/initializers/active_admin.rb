@@ -56,6 +56,9 @@ ActiveAdmin.setup do |config|
   # This setting changes the method which Active Admin calls
   # within the controller.
   config.authentication_method = :authenticate_admin!
+  def authenticate_admin!
+    redirect_to new_user_session_path unless user_signed_in?
+  end
 
   # == Current User
   #
@@ -83,7 +86,7 @@ ActiveAdmin.setup do |config|
   # link. For example :get, :delete, :put, etc..
   #
   # Default:
-  # config.logout_link_method = :get
+  config.logout_link_method = :delete
 
   # == Root
   #

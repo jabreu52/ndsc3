@@ -1,15 +1,11 @@
 Ndsc::Application.routes.draw do
+  get "speakers/index"
+
   ActiveAdmin.routes(self)
+  root to: 'thirteen#index'
   devise_for :users, controllers: {registrations: 'registrations'}
-  devise_scope :user do
-  	authenticated :user do
-  		root to: 'thirteen#index'
-  	end
-  	unauthenticated :user do
-  		root to: 'thirteen#index'
-  	end
-  end
   resources :users, only: [:index, :show]
+  resources :speakers, only: [:index]
   get '/program' => 'thirteen#program', as: "program"
   get '/housing' => 'thirteen#housing', as: "housing"
   get '/transportation' => 'thirteen#transportation', as: "transportation"

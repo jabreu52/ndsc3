@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
 	# before_filter :authenticate_user!
 
   def authenticate_admin!
-    redirect_to root_path unless current_user.try(:admin?)
+    redirect_to new_user_session_path unless user_signed_in?
   end
 end
