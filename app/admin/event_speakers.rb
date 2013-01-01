@@ -7,4 +7,12 @@ ActiveAdmin.register EventSpeaker do
 			Speaker.find_by_id(event_speaker.speaker_id).name
 		end
 	end
+
+  form do |f|
+		f.inputs "Details" do
+			f.input :event, collection: Event.where{start_time > DateTime.now}
+			f.input :speaker, collection: Speaker.all.sort_by!{|s| s.name}
+			f.buttons
+		end
+  end
 end
