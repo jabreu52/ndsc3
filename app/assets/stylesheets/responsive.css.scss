@@ -951,7 +951,7 @@
     @include box-shadow(none)
   }
   .sub-navigation li a, .sub-navigation li:last-child a {
-    padding: 10px 24px;
+    padding: 10px 23px;
   }
   .welcome-title {
     font-size: 16px
@@ -992,9 +992,9 @@
     padding: 0;
   }
   .navbar .brand {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin: 0 0 0 -5px;
+    /*padding-right: 10px;*/
+    /*padding-left: 10px;*/
+    /*margin: 0 0 0 -5px;*/
   }
   .nav-collapse {
     clear: both;
