@@ -29,4 +29,5 @@ body class=(controller_name, action_name)
 						= render "layouts/carousel" if params[:controller] == "thirteen"
 						= yield
 				= render "layouts/footer"
+				= render "layouts/analytics"
 			/= debug(params) if Rails.env.development?
