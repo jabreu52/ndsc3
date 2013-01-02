@@ -65,7 +65,7 @@
   display: inherit !important;
 }
 
-@media (min-width: 768px) and (max-width: 979px) {
+@media (min-width: 700px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -80,7 +80,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -938,7 +938,7 @@
 
 @media (max-width: 700px) {
   .navbar .brand {
-    font-size: 16px;
+    font-size: 15px;
   }
   .navbar .btn-navbar {
     background: #FFF;
@@ -951,7 +951,7 @@
     @include box-shadow(none)
   }
   .sub-navigation li a, .sub-navigation li:last-child a {
-    padding: 10px 16px;
+    padding: 10px 24px;
   }
   .welcome-title {
     font-size: 16px
