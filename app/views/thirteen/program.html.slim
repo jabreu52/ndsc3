@@ -56,7 +56,7 @@
 			- if event.description
 				.section-body
 					.event-description
-						= event.description
+						= event.description.html_safe
 			.event-speakers
 				- event.speakers.sort_by!{|speaker| speaker.priority}.each do |speaker|
 					.event-speaker.group
