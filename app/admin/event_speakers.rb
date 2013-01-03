@@ -19,7 +19,7 @@ ActiveAdmin.register EventSpeaker do
   form do |f|
 		f.inputs "Details" do
 			f.input :event, collection: Event.where{start_time > DateTime.now}
-			f.input :speaker, collection: Speaker.all.sort_by!{|s| s.first_name unless s.first_name.nil?}
+			f.input :speaker, collection: Speaker.all#.sort_by!{|s| s.first_name unless s.first_name.nil?}
 			f.input :priority
 			f.buttons
 		end
