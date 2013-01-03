@@ -3,6 +3,7 @@ class Speaker < ActiveRecord::Base
 	has_many :events, through: :event_speakers
   attr_accessible :description, :email, :first_name, :image, :keynote, :last_name, :notes,
   								:organization, :phone_number, :suffix, :title
+  validates :first_name, presence: true
   mount_uploader :image, ImageUploader
 
   def name
