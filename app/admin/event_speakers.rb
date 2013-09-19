@@ -1,10 +1,10 @@
 ActiveAdmin.register EventSpeaker do
-  controller do
-    def scoped_collection
-    	event_ids = Event.where{start_time > DateTime.now}.map(&:id)
-    	EventSpeaker.where(event_id: event_ids)
-    end
-  end
+  # controller do
+  #   def scoped_collection
+  #   	event_ids = Event.where{start_time > DateTime.now}.map(&:id)
+  #   	EventSpeaker.where(event_id: event_ids)
+  #   end
+  # end
 
 	index do
 		column "Event" do |event_speaker|
